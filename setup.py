@@ -39,13 +39,13 @@ setup(
     packages=find_packages(exclude=["contrib", "docs", "tests"]),
     include_package_data=True,
     install_requires=[
-        "pillow>=7.0.0",
+        "pillow>=10.0.0",
         "requests>=2.20.0",
         "opencv-python>=4.2.0.32",
         "tqdm>=4.23.0",
         "wikipedia>=1.4.0",
         "diffimg==0.2.3",
-        "arabic-reshaper==2.1.3",
+        "arabic-reshaper==3.0.0",
         "python-bidi==0.4.2",
     ],
     entry_points={
