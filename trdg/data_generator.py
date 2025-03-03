@@ -244,6 +244,8 @@ class FakeTextDataGenerator(object):
         )
         final_image = background_img.filter(gaussian_filter)
         final_mask = background_mask.filter(gaussian_filter)
+        bboxes = mask_to_bboxes(final_mask)
+        final_bboxes = [[x for x in bbox] for bbox in bboxes]
 
         #####################################
         # Generate name for resulting image #
@@ -287,4 +289,6 @@ class FakeTextDataGenerator(object):
         else:
             if output_mask == 1:
                 return final_image, final_mask
+            if output_bboxes == 1:
+                return final_image, final_bboxes
             return final_image
